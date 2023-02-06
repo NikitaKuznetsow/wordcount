@@ -1,17 +1,14 @@
 package main
 
 import (
-	"flag"
 	"fmt"
+	"os"
 	"strings"
 )
 
 func main() {
-	var u bool
-	flag.BoolVar(&u, "u", false, "display in uppercase")
-	flag.Parse()
 
-	values := flag.Args()
+	values := os.Args
 	if values[0] == "" {
 		fmt.Println(0)
 	} else {
