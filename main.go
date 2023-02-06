@@ -7,12 +7,11 @@ import (
 )
 
 func main() {
-
-	values := os.Args
-	if values[0] == "" {
+	var values string = os.Args[1]
+	if values == "" {
 		fmt.Println(0)
 	} else {
-		fmt.Println(len(strings.Split(values[0], " ")))
+		fmt.Println(len(strings.Split(values, " ")))
 	}
 }
 
